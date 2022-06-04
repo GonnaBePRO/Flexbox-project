@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+    integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   <link rel="stylesheet" href="css/utilities.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Post One</title>
 </head>
+
 <body id="home">
   <header class="hero blog">
-    <div id="navbar" class="navbar">
+    <div id="navbar" class="navbar top">
       <h1 class="logo">
         <span class="text-primary"><i class="fas fa-book-open"></i> Coin</span>Flipper
       </h1>
@@ -38,9 +41,18 @@
         <i class="fas fa-user"></i> Posted by <strong>Molly</strong> | 2022
       </p>
       <img src="img/blog/blog1.jpg" alt="">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam perferendis nisi quo similique et quas tempora eligendi, ut accusantium, esse officiis unde dignissimos culpa enim hic adipisci voluptates voluptatem? Quis!</p>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore et accusamus natus. Debitis neque deleniti dolore, quisquam fugiat corporis vel minus expedita animi alias porro pariatur reiciendis necessitatibus? Velit libero, qui quam animi dolorem deleniti corporis quos ducimus et, aliquid alias omnis laudantium ipsa soluta optio pariatur fugiat asperiores aliquam eius! Explicabo nihil ratione illo molestias nulla deserunt nostrum repellat.</p>
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla repellat reiciendis labore modi assumenda eligendi ipsa veniam libero quod fuga ratione accusamus temporibus quidem odit eaque officia saepe quas, totam a explicabo autem. Quod doloribus ullam asperiores modi nulla voluptatibus placeat sequi dolorum repellendus est, recusandae, error architecto ducimus beatae!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam perferendis nisi quo similique et quas tempora
+        eligendi, ut accusantium, esse officiis unde dignissimos culpa enim hic adipisci voluptates voluptatem? Quis!
+      </p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore et accusamus natus. Debitis neque deleniti
+        dolore, quisquam fugiat corporis vel minus expedita animi alias porro pariatur reiciendis necessitatibus? Velit
+        libero, qui quam animi dolorem deleniti corporis quos ducimus et, aliquid alias omnis laudantium ipsa soluta
+        optio pariatur fugiat asperiores aliquam eius! Explicabo nihil ratione illo molestias nulla deserunt nostrum
+        repellat.</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla repellat reiciendis labore modi assumenda
+        eligendi ipsa veniam libero quod fuga ratione accusamus temporibus quidem odit eaque officia saepe quas, totam a
+        explicabo autem. Quod doloribus ullam asperiores modi nulla voluptatibus placeat sequi dolorum repellendus est,
+        recusandae, error architecto ducimus beatae!</p>
     </section>
   </main>
 
@@ -54,5 +66,27 @@
     </div>
     <p>Copyright &copy; 2022 - CointFlipper</p>
   </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    let scrolled = false;
+
+    window.onscroll = function () {
+      if (window.pageYOffset > 100) {
+        navbar.classList.remove('top');
+        if (!scrolled) {
+          navbar.style.transform = 'translateY(-70px)';
+        }
+        setTimeout(function () {
+          navbar.style.transform = 'translateY(0)';
+          scrolled = true;
+        }, 200);
+      } else {
+        navbar.classList.add('top');
+        scrolled = false;
+      }
+    }
+  </script>
 </body>
+
 </html>

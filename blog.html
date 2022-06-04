@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+    integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   <link rel="stylesheet" href="css/utilities.css">
   <link rel="stylesheet" href="css/style.css">
   <title>Read Our Blog</title>
 </head>
+
 <body id="home">
   <header class="hero blog">
-    <div id="navbar" class="navbar">
+    <div id="navbar" class="navbar top">
       <h1 class="logo">
         <span class="text-primary"><i class="fas fa-book-open"></i> Coin</span>Flipper
       </h1>
@@ -36,7 +39,7 @@
       <div class="row">
         <div class="column">
           <div class="column-1">
-              <img src="img/blog/blog1.jpg" alt="">
+            <img src="img/blog/blog1.jpg" alt="">
           </div>
         </div>
         <div class="column">
@@ -45,7 +48,9 @@
             <p class="meta">
               <i class="fas fa-user"></i> Posted by <strong>John</strong> | 2022
             </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam perferendis nisi quo similique et quas tempora eligendi, ut accusantium, esse officiis unde dignissimos culpa enim hic adipisci voluptates voluptatem? Quis!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam perferendis nisi quo similique et quas
+              tempora eligendi, ut accusantium, esse officiis unde dignissimos culpa enim hic adipisci voluptates
+              voluptatem? Quis!</p>
             <a href="post.html" class="btn btn-dark">
               <i class="fas fa-chevron"></i>
               Read More
@@ -59,7 +64,7 @@
       <div class="row">
         <div class="column">
           <div class="column-1">
-              <img src="img/blog/blog2.jpg" alt="">
+            <img src="img/blog/blog2.jpg" alt="">
           </div>
         </div>
         <div class="column">
@@ -68,7 +73,9 @@
             <p class="meta">
               <i class="fas fa-user"></i> Posted by <strong>Molly</strong> | 2022
             </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam perferendis nisi quo similique et quas tempora eligendi, ut accusantium, esse officiis unde dignissimos culpa enim hic adipisci voluptates voluptatem? Quis!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam perferendis nisi quo similique et quas
+              tempora eligendi, ut accusantium, esse officiis unde dignissimos culpa enim hic adipisci voluptates
+              voluptatem? Quis!</p>
             <a href="post.html" class="btn btn-light">
               <i class="fas fa-chevron"></i>
               Read More
@@ -82,7 +89,7 @@
       <div class="row">
         <div class="column">
           <div class="column-1">
-              <img src="img/blog/blog3.jpg" alt="">
+            <img src="img/blog/blog3.jpg" alt="">
           </div>
         </div>
         <div class="column">
@@ -91,7 +98,9 @@
             <p class="meta">
               <i class="fas fa-user"></i> Posted by <strong>John</strong> | 2022
             </p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam perferendis nisi quo similique et quas tempora eligendi, ut accusantium, esse officiis unde dignissimos culpa enim hic adipisci voluptates voluptatem? Quis!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam perferendis nisi quo similique et quas
+              tempora eligendi, ut accusantium, esse officiis unde dignissimos culpa enim hic adipisci voluptates
+              voluptatem? Quis!</p>
             <a href="post.html" class="btn btn-dark">
               <i class="fas fa-chevron"></i>
               Read More
@@ -114,5 +123,28 @@
     </div>
     <p>Copyright &copy; 2022 - CointFlipper</p>
   </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    let scrolled = false;
+
+    window.onscroll = function () {
+      if (window.pageYOffset > 100) {
+        navbar.classList.remove('top');
+        if (!scrolled) {
+          navbar.style.transform = 'translateY(-70px)';
+        }
+        setTimeout(function () {
+          navbar.style.transform = 'translateY(0)';
+          scrolled = true;
+        }, 200);
+      } else {
+        navbar.classList.add('top');
+        scrolled = false;
+      }
+    }
+  </script>
+
 </body>
+
 </html>
